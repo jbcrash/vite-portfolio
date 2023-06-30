@@ -54,7 +54,7 @@ const SocialLinkComponent: React.FC = () => {
   };
 
   return (
-    <div style={{ display: 'flex', flexDirection: 'row', position: 'absolute', minHeight: '100vh', top: '20px', right: '80px' }}>
+    <div style={{ display: 'flex', flexDirection: 'row', position: 'absolute', minHeight: '100vh', top: '20px', right: '100px' }}>
       {SocialLinks.map((link, index) => (
         <a
           key={index}

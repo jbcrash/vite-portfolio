@@ -10,11 +10,13 @@ import About from './pages/About';
 import Resume from './pages/Resume';
 import Contact from './pages/Contact';
 import Music from './pages/Music';
-
+import ThemeToggleButton from './components/ThemeToggleButton.tsx';
+import Svg from "/assets/icons.Dark.svg"
 const App: React.FunctionComponent = () => {
   return (
     <>
       <SocialLinkComponent />
+      <ThemeToggleButton />
 
       <Router>
         <LogoTitle />
