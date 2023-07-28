@@ -1,21 +1,14 @@
 import React from 'react'
-import styled from 'styled-components'
-
-const AboutText = styled.div`
-display: flex;
-position: absolute;
-top: 50%;
-left: 50%;
-transform: translate(-50%, -50%);
-align-items: center;
-justify-content: center;
-font-size: 50px;
-height: 70vh;
-`
+import Nav from '../components/Nav.tsx'
 
 const About: React.FunctionComponent = () => {
     return (
-        <AboutText>About</AboutText>
+        <body>
+            <Nav />
+        <div style={{display: 'grid', placeContent: 'center' }}>
+            <h1>About</h1>
+        </div>
+        </body>
     )
 }
 

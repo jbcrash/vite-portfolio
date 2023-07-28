@@ -1,29 +1,30 @@
 import * as FaIcons from 'react-icons/fa'
+import '../styles.css'
 
-export const SocialLinkData = [
+export const SocialLinksData = [
     {
         title: 'LinkedIn',
         path: 'https://www.linkedin.com/in/josh-bellingham-7627a7239/',
-        icon: <FaIcons.FaLinkedin />
+        icon: <FaIcons.FaLinkedin className='grow' alt='LinkedIn' />
     },
     {
         title: 'Behance',
         path: 'https://www.behance.net/joshbellingham1',
-        icon: <FaIcons.FaBehanceSquare />
+        icon: <FaIcons.FaBehanceSquare className='grow' alt='Behance' />
     },
     {
         title: 'Dribbble',
         path: 'https://dribbble.com/jbcrash?onboarding=true',
-        icon: <FaIcons.FaDribbbleSquare />
+        icon: <FaIcons.FaDribbbleSquare className='grow' alt='Dribbble'/>
     },
     {
         title: 'Fiverr',
         path: 'https://www.fiverr.com/joshbellingham1?up_rollout=true',
-        icon: <img src='src\assets\Fiverr Icon.svg' />
+        icon: <FaIcons.FaFeatherAlt className='grow' alt='Fiverr'/>
     },
     {
         title: 'GitHub',
         path: 'https://www.fiverr.com/joshbellingham1?up_rollout=true',
-        icon: <FaIcons.FaGithubSquare />
+        icon: <FaIcons.FaGithubSquare className='grow' alt='Github'/>
     }
 ]

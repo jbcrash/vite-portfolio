@@ -1,0 +1,47 @@
+li {
+    list-style-type: none;
+    padding: 1.5vw;
+    padding-left: 1rem;
+    font-size: 1.5rem;
+}
+
+.icon-container {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    width: 2.5rem;
+    height: 2.5rem; 
+}
+  
+.icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 1;
+}
+  
+
+.title {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 0.5rem;
+    opacity: 0;
+    transition: transform 0.5s ease-out, opacity 0.4s ease-out;
+    transform: translateX(-100%);
+}
+
+.app.light-theme .title {
+    color: #020406 !important;
+}
+
+.app.dark-theme .title {
+    color: #ffffff !important;
+}
+
+.container {
+    display: grid;
+    position: absolute;
+    top: 10rem;
+}

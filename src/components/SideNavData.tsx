@@ -4,26 +4,25 @@ export const SideNavData = [
     {
         title: 'Home',
         path: '/',
-        icon: <FaIcons.FaHome />
+        icon: <FaIcons.FaHome />,
+        isActive: false
     },
     {
         title: 'About',
         path: '/about',
-        icon: <FaIcons.FaInfo />
+        icon: <FaIcons.FaInfoCircle />,
+        isActive: false
     },
     {
         title: 'Resume',
         path: '/resume',
-        icon: <FaIcons.FaFileAlt />
+        icon: <FaIcons.FaFileAlt />,
+        isActive: false
     },
     {
         title: 'Contact',
         path: '/contact',
-        icon: <FaIcons.FaAt />
+        icon: <FaIcons.FaAt />,
+        isActive: false
     },
-    {
-        title: 'Music',
-        path: '/music',
-        icon: <FaIcons.FaMusic />
-    }
 ]

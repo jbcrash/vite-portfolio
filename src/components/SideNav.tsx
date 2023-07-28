@@ -1,67 +1,11 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-import styled from 'styled-components' 
+import React, { useState } from 'react'
+import { Link, useLocation } from 'react-router-dom'
 import { SideNavData } from './SideNavData'
-import { useState } from 'react'
+import './SideNav.css'
 
-const SideNavMenu = styled.div`
-    width: 250px;
-    height: 100vh;
-    background-color: opacity: 0;
-    position: absolute;
-    top: 60px;
-    left: 0;
-`
-
-const MenuItems = styled.li`
-    list-style: none;
-    display: flex;
-    align-items: center;
-    justify-content: start;
-    width: 100%;
-    height: 90px;
-    padding: 1rem 0 1.25rem;
-`
-
-const MenuItemLinks = styled(Link)`
-    display: flex;
-    align-items: center;
-    padding: 0 2rem;
-    font-size: 20px;
-    text-decoration: none;
-    color: #ffffff;
-    position: absolute;
-
-    &:hover {
-        background-color: rgba(0, 0, 0, 0);
-        color: #ffffff;
-        .icon {color: #9747ff;}
-        .title {
-            transfrom: translateX(10px);
-            opacity: 1;}
-        height: 45px;
-        align-items: center;
-    }
-`
-
-const Icon = styled.span`
-    color: #ffffff;
-`;
-
-const Title = styled.span<{ isVisible: boolean }>`
-    display: inline-block;
-    margin-left: 10px;
-
-    opacity: 0;
-    transition: transform 0.5s ease-out, opacity 0.4s ease-out;
-    transform: translateX(-100%);
-    ${({ isVisible }) => isVisible && `
-    opacity: 1;
-    transform: translateX(0);
-    `}
-`;
 
 const SideNav: React.FC = () => {
+  const location = useLocation();
   const [hoveredItem, setHoveredItem] = useState('');
 
   const handleMouseEnter = (title: string) => {
@@ -73,24 +17,30 @@ const SideNav: React.FC = () => {
   };
 
   return (
-    <SideNavMenu>
+    <div className='container'>
       {SideNavData.map((item, index) => {
         const isHovered = hoveredItem === item.title;
+        const isActive = location.pathname === item.path;
 
         return (
-          <MenuItems key={index}>
-            <MenuItemLinks
+          <li key={index}>
+            <Link 
               to={item.path}
               onMouseEnter={() => handleMouseEnter(item.title)}
-              onMouseLeave={handleMouseLeave}
-            >
-                <Icon className="icon">{item.icon}</Icon>
-                <Title isVisible={isHovered}>{item.title}</Title>
-            </MenuItemLinks>
-          </MenuItems>
+              onMouseLeave={handleMouseLeave}>
+                <span className='icon-container' style={{ background: isActive ? 'linear-gradient(144deg, rgba(55,49,140,0.75) 26%, rgba(41,41,186,0.75) 76%, rgba(0,116,209,0.75) 99%)' : 'transparent' }}>
+                  <span className='icon' style={{ color: isHovered ? '#9747ff' : '' }}>
+                    {item.icon}
+                  </span>
+                </span>
+                <span className='title' style={{opacity: isHovered ? 1 : 0, transform: isHovered ? 'translateX(0)' : 'translateX(-100%)'}}>
+                  {item.title}
+                </span>
+            </Link>
+          </li>
         );
       })}
-    </SideNavMenu>
+    </div>
   );
 };
 
