@@ -45,7 +45,6 @@ const Home: React.FunctionComponent = () => {
 
     return (
         <div>
-            <Nav />
         <div className={isHovered ? 'bg-hovered' : 'bg-normal'}>
             <img src={backgroundImage} style={{position: 'fixed', width: '100%'}} />
         </div>
@@ -75,7 +74,7 @@ const Home: React.FunctionComponent = () => {
                     </h2>
                 </span>
             </div>
-            <div style={{position: 'relative', top: '80vh', zIndex: '2'}}>
+            <div style={{position: 'relative', top: '80vh'}}>
                 <h1 style={{position: 'relative', top: '-4em'}}>My Work</h1>
                 <Card 
                     imageUrl={kalsMockup}
@@ -100,6 +99,7 @@ const Home: React.FunctionComponent = () => {
                     link='/pablos-pharmacy' />
             </div>
             </div>
+        <Nav />
         </div>
 
     )

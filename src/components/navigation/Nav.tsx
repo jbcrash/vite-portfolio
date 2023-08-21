@@ -8,9 +8,9 @@ import SocialLinkComponent from './SocialLinkComponent.tsx';
 const Nav: React.FC = () => {
   
     return (
-    <div>
-        <SideNav />
+    <div style={{zIndex: '100'}}>
         <LogoTitle />
+        <SideNav />
         <SocialLinkComponent /> 
     </div>
     )
