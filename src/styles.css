@@ -2,6 +2,13 @@
   font-family: Jost, san-serif, system-ui;
   font-weight: 400;
 
+  --dark: #010204;
+  --purple: #9747FF;
+  --blue: #0559F3;
+  --cyan: #2CD7D4;
+  --orange: #FA931C;
+  --purple-grad: linear-gradient(292deg, rgba(7,74,197,1) 0%, rgba(49,0,113,1) 38%, rgba(73,7,158,1) 60%, rgba(14,65,158,1) 96%);
+
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -10,12 +17,20 @@
 
 body {
   margin: 0;
-  min-height: 100vh;
+}
+
+html.light-theme {
+  background-color: #fff;
+  color: #010204;
+}
+
+html.dark-theme {
+  background-color: #010204;
+  color: #fff;
 }
 
 .page {
   margin: 0;
-  min-height: 100vh;
 }
 
 h1 {
@@ -41,6 +56,20 @@ h2 {
   padding: 0.5rem;
   justify-content: center;
   align-items: center;
+}
+
+h3 {
+  text-align: Left;
+  font-family: Jost;
+  font-size: 2vw;
+  font-weight: 500;
+}
+
+p {
+  text-align: center;
+  font-family: Jost;
+  font-size: 2.5vw;
+  font-weight: 400;
 }
 
 .app.light-theme {
@@ -80,12 +109,13 @@ h2 {
 }
 
 .responsive-hide {
-  display: flex;
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 800px) {
   .responsive-hide {
-    display: none;
+    opacity: 0;
   }
 }
 
@@ -220,12 +250,6 @@ h2 {
   transition: opacity 0.3s ease-in;
 }
 
-.bg-transitioning {
-  z-index: -1;
-  opacity: 0.3;
-  transition: opacity 0.3s ease-in;
-}
-
 .ux-designer,
 .digital-instructor,
 .web-developer {
@@ -250,4 +274,15 @@ h2 {
   font-weight: 500;
   border-radius: 0.625rem;
   background: rgba(44, 215, 212, 0.25);
+}
+
+.work-card {
+  width: 48vw;
+  height: 27vw;
+  position: absolute;
+  display: flex;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 1rem;
+  background-size: cover;
 }

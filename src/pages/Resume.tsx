@@ -1,5 +1,5 @@
 import React from 'react'
-import Nav from '../components/Nav.tsx'
+import Nav from '../components/navigation/Nav.tsx'
 
 const Resume: React.FunctionComponent = () => {
     return (

@@ -1,10 +1,16 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import '../styles.css';
-import Nav from '../components/Nav.tsx'
+import Nav from '../components/navigation/Nav.tsx'
+import Card from '../components/Card.tsx'
+
 import joshProfile from '../assets/joshProfile.png'
 import joshUX from '../assets/joshUX.png'
 import joshDigital from '../assets/joshDigital.png'
 import joshDev from '../assets/joshDev-temp.png'
+import kalsMockup from '../assets/kalsMockup.png'
+import sizzlyKMockup from '../assets/sizzlyKMockup.png'
+import seniorsOutreachMockup from '../assets/seniorsOutreachMockup.png'
+import pablosMockup from '../assets/pablosMockup.png'
 
 const Home: React.FunctionComponent = () => {
     const [isHovered, setIsHovered] = useState(false);
@@ -24,6 +30,7 @@ const Home: React.FunctionComponent = () => {
         setIsWaiting(true);
         setTimeout(() => {
             setIsWaiting(false)
+            setIsHovered(false)
         }, 300)
     };
     const handleBackground = (image: string) => {
@@ -37,7 +44,8 @@ const Home: React.FunctionComponent = () => {
     };
 
     return (
-        <div className='page'>
+        <div>
+            <Nav />
         <div className={isHovered ? 'bg-hovered' : 'bg-normal'}>
             <img src={backgroundImage} style={{position: 'fixed', width: '100%'}} />
         </div>
@@ -49,7 +57,7 @@ const Home: React.FunctionComponent = () => {
                     Josh Bellingham
                 </h1>
                 </span>
-                <span>
+                <span style={{position: 'relative', top: '25%'}}>
                     <h2 className='ux-designer' 
                     onMouseEnter={() => handleBackground(joshUX)} 
                     onMouseLeave={handleMouseLeave}>
@@ -67,7 +75,30 @@ const Home: React.FunctionComponent = () => {
                     </h2>
                 </span>
             </div>
-            <Nav />
+            <div style={{position: 'relative', top: '80vh', zIndex: '2'}}>
+                <h1 style={{position: 'relative', top: '-4em'}}>My Work</h1>
+                <Card 
+                    imageUrl={kalsMockup}
+                    title='Kneehill Adult Learning Mobile Redesign'
+                    description='Redesigning for a responsive mobile experience.'
+                    link='/sizzly-k' />
+                <Card 
+                    imageUrl={seniorsOutreachMockup}
+                    title='Seniors Outreach Website'
+                    description='An exercise in simplicity.'
+                    link='/sizzly-k' />
+
+                <Card 
+                    imageUrl={sizzlyKMockup}
+                    title='Sizzly K BBQ Mobile App Example'
+                    description='Making mobile ordering effortless.'
+                    link='/sizzly-k' />
+                <Card 
+                    imageUrl={pablosMockup}
+                    title='Pablos Pharmacy Website'
+                    description='A more accessible pharmacy experience'
+                    link='/pablos-pharmacy' />
+            </div>
             </div>
         </div>
 
