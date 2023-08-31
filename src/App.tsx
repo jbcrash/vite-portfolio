@@ -10,7 +10,8 @@ import About from './pages/About.tsx';
 import Resume from './pages/Resume.tsx';
 import Contact from './pages/Contact.tsx';
 import SizzlyK from './pages/SizzlyK.tsx';
-import PablosPharmacy from './pages/PablosPharmacy.tsx';
+import PetersPharmacy from './pages/PetersPharmacy.tsx';
+import KALS from './pages/KALS.tsx';
 
 const App: React.FC= () => {
   const [theme, setTheme] = useState<Theme>('dark');
@@ -36,7 +37,8 @@ const App: React.FC= () => {
           <Route path='/resume' element={<Resume />} />
           <Route path='/contact' element={<Contact />} />
           <Route path='/sizzly-k' element={<SizzlyK />} />
-          <Route path='/pablos-pharmacy' element={<PablosPharmacy />} />
+          <Route path='/peters-pharmacy' element={<PetersPharmacy />} />
+          <Route path='/kals' element={<KALS />} />
         </Routes>
       </Router>
       <label className="switch" style={{ position: 'fixed', top: '2.5%', right: '1%', zIndex: '5'}}>

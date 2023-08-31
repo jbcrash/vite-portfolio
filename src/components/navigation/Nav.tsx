@@ -11,7 +11,7 @@ const Nav: React.FC = () => {
     <div style={{zIndex: '100'}}>
         <LogoTitle />
         <SideNav />
-        <SocialLinkComponent /> 
+        <SocialLinkComponent position='bottomRight' /> 
     </div>
     )
 }

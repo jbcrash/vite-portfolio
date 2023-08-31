@@ -1,12 +1,15 @@
 import React from 'react'
-import Nav from '../components/navigation/Nav.tsx'
+import NavNoSocial from '../components/navigation/NavNoSocial'
+import SocialLinkComponent from '../components/navigation/SocialLinkComponent'
 
 const Contact: React.FunctionComponent = () => {
     return (
         <body>
-            <Nav />
+            <NavNoSocial />
         <div style={{display: 'grid', placeContent: 'center' }}>
-            <h1>Contact</h1>
+            <h1>Let's get in touch</h1>
+            <p>Email: <a href="mailto:jbcrash321@gmail.com">jbcrash321@gmail.com</a></p>
+            <SocialLinkComponent position='center' />
         </div>
         </body>
     )

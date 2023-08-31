@@ -5,8 +5,7 @@ import Card from '../components/Card.tsx'
 import joshProfile from '../assets/joshProfile.png'
 import kalsMockup from '../assets/kalsMockup.png'
 import sizzlyKMockup from '../assets/sizzlyKMockup.png'
-import seniorsOutreachMockup from '../assets/seniorsOutreachMockup.png'
-import pablosMockup from '../assets/pablosMockup.png'
+import petersMockup from '../assets/petersMockup.png'
 
 const About: React.FunctionComponent = () => {
     const [scrollPosition, setScrollPosition] = useState(0);
@@ -61,23 +60,17 @@ const About: React.FunctionComponent = () => {
                     imageUrl={kalsMockup}
                     title='Kneehill Adult Learning Mobile Redesign'
                     description='Redesigning for a responsive mobile experience.'
-                    link='/sizzly-k' />
-                <Card 
-                    imageUrl={seniorsOutreachMockup}
-                    title='Seniors Outreach Website'
-                    description='An exercise in simplicity.'
-                    link='/sizzly-k' />
-
+                    link='/kals' />
                 <Card 
                     imageUrl={sizzlyKMockup}
                     title='Sizzly K BBQ Mobile App Example'
                     description='Making mobile ordering effortless.'
                     link='/sizzly-k' />
                 <Card 
-                    imageUrl={pablosMockup}
-                    title='Pablos Pharmacy Website'
+                    imageUrl={petersMockup}
+                    title="Peter's Pharmacy Website"
                     description='A more accessible pharmacy experience'
-                    link='/pablos-pharmacy' />
+                    link='/peters-pharmacy' />
             </div>
             <Nav />
         </div>

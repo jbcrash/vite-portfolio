@@ -1,13 +1,26 @@
 import React from 'react'
 import Nav from '../components/navigation/Nav.tsx'
-import PDFViewer from '../components/PDFViewer.tsx'
-
+import CanvaEmbedComponent from '../components/CanvaEmbedComponent.tsx'
+import Card from '../components/Card.tsx'
+import kalsMockup from '../assets/kalsMockup.png'
+import petersMockup from '../assets/petersMockup.png'
 
 const SizzlyK: React.FunctionComponent = () => {
     return (
         <div>
-            <div style={{display: 'flex', placeContent: 'center', marginTop: '100px', marginBottom: '100px', zIndex: '0'}}>
-                <PDFViewer pdfUrl="/SizzlyKCaseStudy.pdf" />
+            <CanvaEmbedComponent url="https://www.canva.com/design/DAFb6aSjv_Y/view?embed" />
+            <div style={{position: 'relative', top: '20vw'}}>
+                <h1 style={{position: 'relative', top: '-4em'}}>Other Projects</h1>
+                <Card 
+                    imageUrl={kalsMockup}
+                    title='Kneehill Adult Learning Mobile Redesign'
+                    description='Redesigning for a responsive mobile experience.'
+                    link='/kals' />
+                <Card 
+                    imageUrl={petersMockup}
+                    title="Peter's Pharmacy Website"
+                    description='A more accessible pharmacy experience'
+                    link='/peters-pharmacy' />
             </div>
             <Nav />
         </div>
