@@ -9,30 +9,32 @@ const PDFViewer: React.FC<{ pdfUrl: string }> = ({ pdfUrl }) => {
     const [containerWidth, setContainerWidth] = useState<number>(0);
     const containerRef = useRef<HTMLDivElement>(null);
 
-    useEffect(() => {
-        if (containerRef.current) {
-            setContainerWidth(containerRef.current.offsetWidth);
-        }
 
-        const handleResize = () => {
-            if (containerRef.current) {
-                setContainerWidth(containerRef.current.offsetWidth);
-            }
+    useEffect(() => {
+        const updateContainerWidth = () => {
+            const newContainerWidth = Math.floor(window.innerWidth * 0.58);
+            setContainerWidth(newContainerWidth);
         };
 
-        window.addEventListener('resize', handleResize);
-        return () => window.removeEventListener('resize', handleResize);
+        window.addEventListener('resize', updateContainerWidth);
+        return () => window.removeEventListener('resize', updateContainerWidth);
     }, []);
 
-    function onDocumentLoadSuccess({ numPages }: { numPages: number }) {
+    const onDocumentLoadSuccess = ({ numPages }: { numPages: number }) => {
         setNumPages(numPages);
-    }
+    };
 
     return (
-        <div ref={containerRef} style={{ width: '70%' }}>
+        <div ref={containerRef} style={{ width: '60%' }}>
             <Document file={pdfUrl} onLoadSuccess={onDocumentLoadSuccess}>
-                {Array.from(new Array(numPages || 0), (el, index) => (
-                    <Page key={`page_${index + 1}`} pageNumber={index + 1} width={containerWidth} renderAnnotationLayer={false} />
+                {Array.from(Array(numPages || 0), (_, index) => (
+                    <Page
+                        key={`page_${index + 1}`}
+                        pageNumber={index + 1}
+                        width={containerWidth}
+                        renderAnnotationLayer={false}
+                        renderTextLayer={false}
+                    />
                 ))}
             </Document>
         </div>

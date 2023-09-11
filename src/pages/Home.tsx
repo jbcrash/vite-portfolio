@@ -73,7 +73,7 @@ const Home: React.FunctionComponent = () => {
                     </h2>
                 </span>
             </div>
-            <div style={{position: 'relative', top: '80vh'}}>
+            <div style={{position: 'relative', top: '45vw'}}>
                 <h1 style={{position: 'relative', top: '-4em'}}>My Work</h1>
                 <Card 
                     imageUrl={kalsMockup}
