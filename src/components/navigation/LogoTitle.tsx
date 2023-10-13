@@ -3,8 +3,8 @@ import { Link } from 'react-router-dom';
 import '../../styles.css'
 import styled from 'styled-components';
 import ThemeContext from '../../ThemeContext';
-import JBLogoWhite from 'src/assets/jblogo-white.svg';
-import JBLogoBlack from 'src/assets/jblogo-black.svg';
+import JBLogoWhite from '../assets/jblogo-white.svg';
+import JBLogoBlack from '../assets/jblogo-black.svg';
 
 const Container = styled.div`
     display: flex;
