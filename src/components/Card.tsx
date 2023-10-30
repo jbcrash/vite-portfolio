@@ -17,7 +17,7 @@ const Card: React.FC<CardProps> = ({ imageUrl, title, description, link}) => {
         <div className="content">
             <h3 className="card-title">{title}</h3>
             <p className="card-description">{description}</p>
-            <Link to={link}><button>See more</button></ Link>
+            <Link to={link}><button style={{ whiteSpace: 'nowrap' }}>See more</button></ Link>
         </div>
     </div>
   );
