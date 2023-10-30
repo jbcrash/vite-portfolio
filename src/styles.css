@@ -72,10 +72,6 @@ p {
   font-weight: 400;
 }
 
-.button {
-  text-overflow: clip;
-}
-
 .app.light-theme {
   background-color: #ffffff;
   color: #010204;
