@@ -7,9 +7,6 @@ import joshProfile from '../assets/joshProfile.png'
 import joshUX from '../assets/joshUX.png'
 import joshDigital from '../assets/joshDigital.png'
 import joshDev from '../assets/joshDev-temp.png'
-import kalsMockup from '../assets/kalsMockup.png'
-import sizzlyKMockup from '../assets/sizzlyKMockup.png'
-import petersMockup from '../assets/petersMockup.png'
 
 const Home: React.FunctionComponent = () => {
   const [isHovered, setIsHovered] = useState(false);
