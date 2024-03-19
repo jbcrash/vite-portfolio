@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 import '../../styles.css'
 import styled from 'styled-components';
 import ThemeContext from '../../ThemeContext';
+import JBLogoWhite from '../../assets/jblogo-white.svg';
+import JBLogoBlack from '../../assets/jblogo-black.svg';
 
 const Container = styled.div`
     display: flex;
@@ -21,7 +23,7 @@ const Title = styled.h1`
 
 const LogoTitle: React.FC = () => {
   const themeContext = useContext(ThemeContext);
-  const logoSrc = themeContext.theme === 'dark' ? 'src/assets/jblogo-white.svg' : 'src/assets/jblogo-black.svg';
+  const logoSrc = themeContext.theme === 'dark' ? JBLogoWhite : JBLogoBlack;
 
   return (
     <div>
