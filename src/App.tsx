@@ -2,16 +2,17 @@ import React, { useState, useEffect } from 'react';
 import './styles.css';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import ThemeContext, { Theme } from './ThemeContext.tsx';
-
-
+import ScrollToTopOnMount from './components/ScrollToTopOnMount';
 
 import Home from './pages/Home.tsx';
+import Work from './pages/Work.tsx';
 import About from './pages/About.tsx';
 import Resume from './pages/Resume.tsx';
 import Contact from './pages/Contact.tsx';
 import SizzlyK from './pages/SizzlyK.tsx';
 import PetersPharmacy from './pages/PetersPharmacy.tsx';
 import KALS from './pages/KALS.tsx';
+import IsItLegit from './pages/IsItLegit.tsx';
 
 const App: React.FC= () => {
   const [theme, setTheme] = useState<Theme>('dark');
@@ -31,14 +32,17 @@ const App: React.FC= () => {
     <div className={`app ${theme === 'dark' ? 'dark-theme' : 'light-theme'}`}>
     <ThemeContext.Provider value={{ theme, toggleTheme}}>
       <Router>
+        <ScrollToTopOnMount />
         <Routes>
           <Route path='/' element={<Home />} />
+          <Route path='/work' element={<Work />} />
           <Route path='/about' element={<About />} />
           <Route path='/resume' element={<Resume />} />
           <Route path='/contact' element={<Contact />} />
           <Route path='/sizzly-k' element={<SizzlyK />} />
           <Route path='/peters-pharmacy' element={<PetersPharmacy />} />
           <Route path='/kals' element={<KALS />} />
+          <Route path='/is-it-legit' element={<IsItLegit />} />
         </Routes>
       </Router>
       <label className="switch" style={{ position: 'fixed', top: '2.5%', right: '1%', zIndex: '5'}}>

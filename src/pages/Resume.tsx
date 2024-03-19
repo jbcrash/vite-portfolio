@@ -1,7 +1,8 @@
 import React from 'react'
 import Nav from '../components/navigation/Nav.tsx'
 import PDFViewer from '../components/PDFViewer.tsx'
-import JBResume from '../assets/Josh Bellingham Resume 2023 (2).pdf'
+import JBResume from '../assets/Josh Bellingham Resume October 2023 (1).pdf'
+import CanvaEmbedComponent from '../components/CanvaEmbedComponent.tsx'
 
 const Resume: React.FunctionComponent = () => {
     return (
@@ -11,6 +12,7 @@ const Resume: React.FunctionComponent = () => {
             <h1>Resume</h1>
             <PDFViewer pdfUrl={JBResume} />
         </div>
+        <div><CanvaEmbedComponent url="https://www.canva.com/design/DAF_5vxWruU/sVBgbwoC63ygF5lfUITiWw/view?embed" /></div>
         </div>
     )
 }

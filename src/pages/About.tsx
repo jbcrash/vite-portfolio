@@ -1,11 +1,10 @@
 import React, { useState, useEffect } from 'react'
 import Nav from '../components/navigation/Nav.tsx'
-import Card from '../components/Card.tsx'
+import WorkButton from '../components/navigation/WorkButton.tsx'
+import CanvaEmbedComponent from '../components/CanvaEmbedComponent.tsx'
 
 import joshProfile from '../assets/joshProfile.png'
-import kalsMockup from '../assets/kalsMockup.png'
-import sizzlyKMockup from '../assets/sizzlyKMockup.png'
-import petersMockup from '../assets/petersMockup.png'
+
 
 const About: React.FunctionComponent = () => {
     const [scrollPosition, setScrollPosition] = useState(0);
@@ -48,30 +47,12 @@ const About: React.FunctionComponent = () => {
             right: 0,
             zIndex: '1'}}>
                 <h1>Hi, I'm Josh Bellingham</h1>
-                <p style={{marginTop: '0.25rem'}}>I’m a user experience designer and tech enthusiast from Three Hills AB.
-                I currently working for local non-profits to improve their web prescence, manage their IT, and teach digital literacy.</p>
-                <p style={{marginTop: '0.25rem'}}>I love improving designs by creating design systems that promote accessibilty for everyone. 
-                Icons, color, and plain language all contribute to an equitable user experience, and I love building them into products.</p>
+                <p style={{marginTop: '0.25rem'}}>I have been working in tech for most of my life, and have developed a love for helping people achieve their goals.
+                I am currently working for local non-profits to improve their web prescence, manage their IT, and teach digital literacy.</p>
+                <p style={{marginTop: '0.25rem'}}>I am excited about learning new things, and I love learning by doing. Below are some of the certifications I have earned.</p>
             </div>
-            {/* Content */}
-            <div style={{position: 'relative', top: '50vh', zIndex: '2'}}>
-                <h1 style={{position: 'relative', top: '-4em'}}>My Work</h1>
-                <Card 
-                    imageUrl={kalsMockup}
-                    title='Kneehill Adult Learning Mobile Redesign'
-                    description='Redesigning for a responsive mobile experience.'
-                    link='/kals' />
-                <Card 
-                    imageUrl={sizzlyKMockup}
-                    title='Sizzly K BBQ Mobile App Example'
-                    description='Making mobile ordering effortless.'
-                    link='/sizzly-k' />
-                <Card 
-                    imageUrl={petersMockup}
-                    title="Peter's Pharmacy Website"
-                    description='A more accessible pharmacy experience'
-                    link='/peters-pharmacy' />
-            </div>
+            <div><WorkButton /></div>
+            <div><CanvaEmbedComponent url="https://www.canva.com/design/DAF_5vxWruU/lHMp_jZY0va4zD6Vtn8AfQ/view?embed" /></div>
             <Nav />
         </div>
     )

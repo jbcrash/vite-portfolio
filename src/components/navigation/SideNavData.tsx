@@ -8,6 +8,12 @@ export const SideNavData = [
         isActive: false
     },
     {
+        title: 'Work',
+        path: '/work',
+        icon: <FaIcons.FaBriefcase />,
+        isActive: false
+    },
+    {
         title: 'About',
         path: '/about',
         icon: <FaIcons.FaInfoCircle />,

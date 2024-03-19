@@ -255,7 +255,7 @@ p {
 .web-developer {
   display: inline-flex;
   width: 22vw;
-  margin: 2vw;
+  margin: 1.5vw;
   justify-content: center;
   align-items: center;
 }
