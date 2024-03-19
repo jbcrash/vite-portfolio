@@ -52,7 +52,7 @@ const About: React.FunctionComponent = () => {
                 <p style={{marginTop: '0.25rem'}}>I am excited about learning new things, and I love learning by doing. Below are some of the certifications I have earned.</p>
             </div>
             <div><WorkButton /></div>
-            <div><CanvaEmbedComponent url="https://www.canva.com/design/DAF_5vxWruU/lHMp_jZY0va4zD6Vtn8AfQ/view?embed" /></div>
+            <div><CanvaEmbedComponent url="https://www.canva.com/design/DAF_5vxWruU/sVBgbwoC63ygF5lfUITiWw/view?embed" /></div>
             <Nav />
         </div>
     )
