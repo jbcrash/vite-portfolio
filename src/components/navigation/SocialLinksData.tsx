@@ -5,16 +5,16 @@ export const SocialLinksData = [
     {
         title: 'LinkedIn',
         path: 'https://www.linkedin.com/in/josh-bellingham/',
-        icon: <FaIcons.FaLinkedin className='grow' alt='LinkedIn' />
+        icon: <FaIcons.FaLinkedin className='grow'/>
     },
     {
-        title: 'Fiverr',
-        path: 'https://www.fiverr.com/joshbellingham1?up_rollout=true',
-        icon: <FaIcons.FaMusic className='grow' alt='Fiverr'/>
+        title: 'Credly',
+        path: 'https://www.credly.com/users/joshua-bellingham',
+        icon: <FaIcons.FaCertificate className='grow'/>
     },
     {
         title: 'GitHub',
         path: 'https://github.com/jbcrash',
-        icon: <FaIcons.FaGithubSquare className='grow' alt='Github'/>
+        icon: <FaIcons.FaGithubSquare className='grow'/>
     }
 ]
