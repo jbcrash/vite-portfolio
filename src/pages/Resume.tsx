@@ -1,7 +1,7 @@
 import React from 'react'
 import Nav from '../components/navigation/Nav.tsx'
 import PDFViewer from '../components/PDFViewer.tsx'
-import JBResume from '../assets/Josh Bellingham Resume June 2024.pdf'
+import JBResume from '../assets/JoshBellinghamResumeNovember2024.pdf'
 import CanvaEmbedComponent from '../components/CanvaEmbedComponent.tsx'
 
 const Resume: React.FunctionComponent = () => {

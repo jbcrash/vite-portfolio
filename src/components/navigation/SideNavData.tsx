@@ -19,12 +19,12 @@ export const SideNavData = [
         icon: <FaIcons.FaInfoCircle />,
         isActive: false
     },
-    {
-        title: 'Resume',
-        path: '/resume',
-        icon: <FaIcons.FaFileAlt />,
-        isActive: false
-    },
+    // {
+    //     title: 'Resume',
+    //     path: '/resume',
+    //     icon: <FaIcons.FaFileAlt />,
+    //     isActive: false
+    // },
     {
         title: 'Contact',
         path: '/contact',
