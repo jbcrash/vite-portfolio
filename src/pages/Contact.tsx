@@ -8,7 +8,7 @@ const Contact: React.FunctionComponent = () => {
             <NavNoSocial />
         <div style={{display: 'grid', placeContent: 'center' }}>
             <h1>Let's get in touch</h1>
-            <p>Email: <a href="mailto:jbcrash321@gmail.com">jbcrash321@gmail.com</a></p>
+            <p>Email: <a href="mailto:kneehilllearn.josh@gmail.com">KneehillLearn.Josh@gmail.com</a></p>
             <SocialLinkComponent position='center' />
         </div>
         </body>
